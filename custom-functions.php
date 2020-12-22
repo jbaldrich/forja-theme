@@ -22,3 +22,9 @@ add_action('wp_enqueue_scripts', $addCustomStyles);
 
 // Remove the entry meta in the entry header
 remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
+
+// RCP
+$changeRegisterButtonText = static function ($text) {
+    return __('Registrarse', 'forja-theme');
+};
+add_filter('rcp_registration_register_button', $changeRegisterButtonText);
