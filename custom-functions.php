@@ -28,3 +28,8 @@ $changeRegisterButtonText = static function ($text) {
     return __('Registrarse', 'forja-theme');
 };
 add_filter('rcp_registration_register_button', $changeRegisterButtonText);
+
+$changeVerificationLinkUrl = static function (string $redirect_url, RCP_Member $RCPMember) {
+    return str_replace('.com/', '.com/registro/bienvenida/');
+};
+add_filter('rcp_verification_redirect_url', $changeVerificationLinkUrl);
