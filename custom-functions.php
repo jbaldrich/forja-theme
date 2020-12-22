@@ -30,7 +30,13 @@ $changeRegisterButtonText = static function ($text) {
 add_filter('rcp_registration_register_button', $changeRegisterButtonText);
 
 $changeVerificationLinkUrl = static function (string $redirect_url) {
-    var_dump($redirect_url);die;
-    return str_replace('.com/', '.com/registro/bienvenida/', $redirect_url);
+    global $rcp_options;
+
+    $welcome_page = $rcp_options['redirect'];
+    if ( ! $redirect = add_query_arg( ['rcp-message' => 'email-verified'], get_post_permalink( $welcome_page ) ) ) {
+        return $redirect_url;
+    }
+
+    return $redirect;
 };
 add_filter('rcp_verification_redirect_url', $changeVerificationLinkUrl);
