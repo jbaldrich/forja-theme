@@ -18,7 +18,7 @@ add_filter( 'genesis_theme_settings_defaults', 'digital_theme_defaults' );
  */
 function digital_theme_defaults( $defaults ) {
 
-	$defaults['blog_cat_num']              = 3;
+	$defaults['blog_cat_num']              = 999;
 	$defaults['content_archive']           = 'full';
 	$defaults['content_archive_limit']     = 160;
 	$defaults['content_archive_thumbnail'] = 1;
@@ -42,7 +42,7 @@ function digital_theme_setting_defaults() {
 	if ( function_exists( 'genesis_update_settings' ) ) {
 
 		genesis_update_settings( array(
-			'blog_cat_num'              => 3,
+			'blog_cat_num'              => 999,
 			'content_archive'           => 'full',
 			'content_archive_limit'     => 160,
 			'content_archive_thumbnail' => 1,
@@ -54,7 +54,7 @@ function digital_theme_setting_defaults() {
 
 	} 
 
-	update_option( 'posts_per_page', 3 );
+	update_option( 'posts_per_page', 999 );
 
 }
 
