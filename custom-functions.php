@@ -30,6 +30,7 @@ $changeRegisterButtonText = static function ($text) {
 add_filter('rcp_registration_register_button', $changeRegisterButtonText);
 
 $changeVerificationLinkUrl = static function (string $redirect_url) {
+    var_dump($redirect_url);die;
     return str_replace('.com/', '.com/registro/bienvenida/', $redirect_url);
 };
 add_filter('rcp_verification_redirect_url', $changeVerificationLinkUrl);
