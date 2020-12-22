@@ -19,3 +19,6 @@ $addCustomStyles = static function () {
     );
 };
 add_action('wp_enqueue_scripts', $addCustomStyles);
+
+// Remove the entry meta in the entry header
+remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
