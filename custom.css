@@ -1,0 +1,70 @@
+/* Custom Styles --------------------------------------*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.site-description,
+.site-title,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', 'Helvetica Neue', 'Open Sans', sans-serif !important;
+}
+
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.widget_text p,
+.widget_text ol,
+.widget_text ul,
+.widget_text dl,
+.widget_text dt,
+.widget-content .rssSummary {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Button --------------------------------------*/
+
+.sticky-button {
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+    bottom: 0;
+    background-color: whitesmoke;
+    z-index: 2;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.wp-block-buttons {
+    overflow: visible !important;
+    overflow-x: visible;
+}
+
+/* FacetWP --------------------------------------*/
+.facetwp-type-checkboxes {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.facetwp-checkbox .facetwp-expand {
+    float: none !important;
+}
+
+.facetwp-counter {
+    display: none;
+}
+
+/* Grid --------------------------------------*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid-container > article {
+    padding: 1rem;
+}
