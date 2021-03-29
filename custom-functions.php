@@ -40,3 +40,11 @@ $changeVerificationLinkUrl = static function (string $redirect_url) {
     return $redirect;
 };
 add_filter('rcp_verification_redirect_url', $changeVerificationLinkUrl);
+
+$avoidUserNameFromForm = static function ( $user ) {
+    rcp_errors()->remove( 'username_empty' );
+    $user['login'] = $user['email'];
+    return $user;
+};
+
+add_filter( 'rcp_user_registration_data', $avoidUserNameFromForm );
